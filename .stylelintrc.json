@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier-scss",
+    "stylelint-config-standard-vue"
+  ],
+  "plugins": ["@stylistic/stylelint-plugin"],
+  "rules": {
+    "@stylistic/indentation": 2,
+    "number-max-precision": 20
+  },
+  "ignoreFiles": ["/node_modules/*", "**/*.js", "/dist/*", "/public/*"]
+}

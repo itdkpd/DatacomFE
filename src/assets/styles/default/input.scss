@@ -1,0 +1,46 @@
+@use './colors' as colors;
+
+.form-control {
+  border: 1px solid colors.$primary;
+  width: 100%;
+  border-radius: 3px;
+  margin: 1px 0;
+  transition:
+    border-color ease-in-out 0.15s,
+    box-shadow ease-in-out 0.15s;
+  flex: 1;
+  outline: none;
+  padding: 5px 12px;
+  font-size: 14px;
+  line-height: 20px;
+
+  &.form-control-error {
+    border: 1px solid colors.$error;
+  }
+}
+
+.form-control[disabled] {
+  cursor: not-allowed;
+  border-color: #c4c4c4;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 1px colors.$primary;
+  border: 1px solid colors.$primary;
+  border-radius: 0;
+  outline: colors.$primary;
+
+  &.form-control-error {
+    box-shadow: 0 0 0 1px colors.$error;
+    border: 1px solid colors.$error;
+  }
+}
+
+span.form-control-error {
+  color: #dc3545;
+  display: block;
+
+  &::first-letter {
+    text-transform: capitalize;
+  }
+}
